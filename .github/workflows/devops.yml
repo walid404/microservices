@@ -1,0 +1,28 @@
+name: Microservices Application with python
+
+on: [push]
+
+jobs:
+  build:
+    run-on:ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.12
+      uses: action/setup-python@v1
+      with:
+        python-version: 3.12
+    - name: Install dependencies
+      run: |
+        make install
+    - name: lint with pylint
+      run: |
+        #make lint
+    - name: test with pytest
+      run: |
+        #make test
+    - name: Format code
+      run: |
+        #make format
+        
+        
